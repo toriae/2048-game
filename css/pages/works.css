@@ -1,0 +1,79 @@
+.works-page {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 2.5rem 2rem 4rem;
+}
+
+.works-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.work-card {
+  padding: 1.25rem 1.5rem;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  border-top: 2px solid var(--accent);
+  transition: all var(--transition);
+  position: relative;
+}
+
+.work-card::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--accent);
+  transition: width 0.3s ease;
+}
+
+.work-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
+}
+
+.work-card:hover::after {
+  width: 100%;
+}
+
+.work-name {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  transition: color var(--transition);
+}
+
+.work-card:hover .work-name {
+  color: var(--accent);
+}
+
+.work-desc {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin-bottom: 0.75rem;
+}
+
+.work-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  margin-bottom: 0.75rem;
+}
+
+.work-link {
+  font-size: 0.78rem;
+  color: var(--accent);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  transition: gap var(--transition);
+}
+
+.work-link:hover {
+  gap: 0.5rem;
+}

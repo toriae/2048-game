@@ -1,0 +1,143 @@
+@property --skill-deg {
+  syntax: '<angle>';
+  initial-value: 0deg;
+  inherits: false;
+}
+
+.about-page {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 2.5rem 2rem 4rem;
+}
+
+.about-bio {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  line-height: 1.85;
+  margin-bottom: 2.5rem;
+  padding: 1.25rem 1.5rem;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  border-left: 3px solid var(--accent);
+}
+
+.about-section {
+  margin-bottom: 2.5rem;
+}
+
+.about-section-title {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.contact-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  color: var(--text-secondary);
+  text-decoration: none;
+  padding: 0.75rem 1rem;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  transition: all var(--transition);
+}
+
+.contact-item:hover {
+  color: var(--accent);
+  border-color: var(--accent);
+  transform: translateX(4px);
+}
+
+.contact-icon {
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--accent-dim);
+  border-radius: var(--radius-sm);
+  color: var(--accent);
+  font-size: 0.85rem;
+}
+
+.contact-text {
+  font-size: 0.9rem;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(90px, 1fr));
+  gap: 1.5rem;
+}
+
+.skill-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.skill-ring {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s ease;
+}
+
+.skill-item:hover .skill-ring {
+  transform: scale(1.05);
+}
+
+.skill-ring-bg {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background: conic-gradient(var(--border) 0deg, var(--border) 360deg);
+}
+
+.skill-ring-fill {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background: conic-gradient(var(--accent) 0deg, var(--accent) var(--skill-deg, 0deg), transparent var(--skill-deg, 0deg), transparent 360deg);
+  transition: --skill-deg 1s ease-out;
+}
+
+.skill-ring-center {
+  position: relative;
+  z-index: 1;
+  width: 54px;
+  height: 54px;
+  border-radius: 50%;
+  background: var(--bg-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+.skill-name {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  text-align: center;
+}

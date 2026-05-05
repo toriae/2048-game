@@ -1,0 +1,19 @@
+.reader-container {
+  --reader-bg: var(--bg-primary);
+  --reader-text: var(--text-primary);
+}
+
+.reader-container[data-theme="dark"] {
+  --reader-bg: #0d1117;
+  --reader-text: #e6edf3;
+}
+
+.reader-container[data-theme="light"] {
+  --reader-bg: #ffffff;
+  --reader-text: #1f2328;
+}
+
+.reader-container[data-theme="sepia"] {
+  --reader-bg: #f5f0e6;
+  --reader-text: #2d2d2d;
+}

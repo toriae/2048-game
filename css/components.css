@@ -1,0 +1,220 @@
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.55rem 1.1rem;
+  font-size: 0.85rem;
+  font-weight: 500;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: all var(--transition);
+  background: var(--bg-secondary);
+  color: var(--text-primary);
+  text-decoration: none;
+}
+
+.btn:hover {
+  background: var(--bg-hover);
+  border-color: var(--text-muted);
+  transform: translateY(-1px);
+}
+
+.btn:active {
+  transform: translateY(0);
+}
+
+.btn--primary {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #fff;
+}
+
+.btn--primary:hover {
+  background: var(--accent-hover);
+  border-color: var(--accent-hover);
+}
+
+.btn--ghost {
+  background: transparent;
+  border-color: var(--border);
+}
+
+.btn--ghost:hover {
+  background: var(--accent-dim);
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.btn--sm {
+  padding: 0.3rem 0.6rem;
+  font-size: 0.78rem;
+}
+
+.tag {
+  display: inline-block;
+  padding: 0.2rem 0.6rem;
+  font-size: 0.72rem;
+  font-weight: 500;
+  border-radius: 20px;
+  background: var(--accent-dim);
+  color: var(--accent);
+}
+
+.tag--green {
+  background: var(--green-dim);
+  color: var(--green);
+}
+
+.tag--orange {
+  background: var(--orange-dim);
+  color: var(--orange);
+}
+
+.badge {
+  display: inline-block;
+  padding: 0.15rem 0.5rem;
+  font-size: 0.68rem;
+  font-family: var(--font-mono);
+  background: var(--bg-hover);
+  color: var(--text-muted);
+  border-radius: 3px;
+  border: 1px solid var(--border-light);
+}
+
+.card {
+  padding: 1.25rem 1.5rem;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  transition: all var(--transition);
+}
+
+.card:hover {
+  border-color: var(--text-muted);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-sm);
+}
+
+.empty-state {
+  text-align: center;
+  padding: 4rem 2rem;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.empty-state i {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  display: block;
+  opacity: 0.4;
+}
+
+.divider {
+  border: none;
+  border-top: 1px solid var(--border);
+  margin: 1.5rem 0;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+}
+
+.form-label {
+  display: block;
+  font-size: 0.78rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  margin-bottom: 0.4rem;
+}
+
+.form-input,
+.form-textarea {
+  width: 100%;
+  padding: 0.55rem 0.85rem;
+  font-size: 0.88rem;
+  color: var(--text-primary);
+  background: var(--bg-input);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  outline: none;
+  transition: all var(--transition);
+}
+
+.form-input:focus,
+.form-textarea:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px var(--accent-dim);
+}
+
+.form-textarea {
+  min-height: 100px;
+  resize: vertical;
+  font-family: inherit;
+}
+
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.modal-overlay.open {
+  opacity: 1;
+}
+
+.modal {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  width: 90%;
+  max-width: 380px;
+  transform: scale(0.95);
+  transition: transform 0.2s ease;
+}
+
+.modal-overlay.open .modal {
+  transform: scale(1);
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.25rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.modal-header h3 {
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.modal-body {
+  padding: 1.25rem;
+}
+
+.modal-body p {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+.modal-footer {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.5rem;
+  padding: 0.75rem 1.25rem;
+  border-top: 1px solid var(--border);
+}

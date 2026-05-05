@@ -1,0 +1,254 @@
+#app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+#page-container {
+  flex: 1;
+  padding-top: 56px;
+}
+
+.page-enter {
+  opacity: 0;
+  transform: translateY(8px);
+}
+
+.page-active {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.25s ease-out, transform 0.25s ease-out;
+}
+
+.page-exit {
+  opacity: 0;
+  transition: opacity 0.1s ease-in;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* Shared page header */
+.page-header {
+  margin-bottom: 2rem;
+}
+
+.page-header-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 0.3rem;
+}
+
+.page-header-desc {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+}
+
+/* Shared section title with accent bar */
+.section-title {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.section-title::before {
+  content: '';
+  display: inline-block;
+  width: 3px;
+  height: 14px;
+  background: var(--accent);
+  border-radius: 2px;
+}
+
+/* Navbar */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 56px;
+  background: var(--navbar-bg);
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  border-bottom: 1px solid var(--border);
+  z-index: 100;
+  transition: background 0.3s ease;
+}
+
+.navbar-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding: 0 2rem;
+}
+
+.navbar-brand {
+  font-family: var(--font-mono);
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  text-decoration: none;
+  margin-right: 2rem;
+  letter-spacing: -0.02em;
+  transition: color 0.2s ease;
+}
+
+.navbar-brand:hover {
+  color: var(--accent);
+}
+
+.navbar-brand span {
+  color: var(--accent);
+}
+
+.navbar-links {
+  display: flex;
+  gap: 0.15rem;
+}
+
+.nav-link {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  text-decoration: none;
+  padding: 0.4rem 0.7rem;
+  border-radius: var(--radius-sm);
+  transition: all 0.2s ease;
+  position: relative;
+}
+
+.nav-link:hover {
+  color: var(--text-primary);
+  background: var(--bg-hover);
+}
+
+.nav-link.active {
+  color: var(--accent);
+  background: var(--accent-dim);
+}
+
+.navbar-actions {
+  display: flex;
+  gap: 0.35rem;
+  margin-left: auto;
+}
+
+.navbar-actions button {
+  padding: 0.4rem 0.6rem;
+  background: none;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  color: var(--text-secondary);
+  cursor: pointer;
+  font-size: 0.8rem;
+  transition: all 0.2s ease;
+}
+
+.navbar-actions button:hover {
+  color: var(--accent);
+  border-color: var(--accent);
+  background: var(--accent-dim);
+}
+
+.hamburger {
+  display: none;
+}
+
+.mobile-menu {
+  position: fixed;
+  top: 56px;
+  left: 0;
+  right: 0;
+  background: var(--bg-secondary);
+  border-bottom: 1px solid var(--border);
+  z-index: 99;
+  transform: translateY(-100%);
+  opacity: 0;
+  transition: all 0.25s ease;
+  pointer-events: none;
+}
+
+.mobile-menu.open {
+  transform: translateY(0);
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.mobile-menu-links {
+  padding: 0.5rem;
+}
+
+.mobile-nav-link {
+  display: block;
+  padding: 0.85rem 1rem;
+  font-size: 0.88rem;
+  color: var(--text-secondary);
+  text-decoration: none;
+  border-radius: var(--radius-sm);
+  transition: all 0.2s ease;
+}
+
+.mobile-nav-link:hover,
+.mobile-nav-link.active {
+  color: var(--accent);
+  background: var(--accent-dim);
+}
+
+/* Footer */
+.site-footer {
+  border-top: 1px solid var(--border);
+  padding: 2.5rem 2rem;
+  margin-top: 4rem;
+}
+
+.footer-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-links {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.footer-links a {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.footer-links a:hover {
+  color: var(--accent);
+}
+
+.footer-social {
+  display: flex;
+  gap: 1rem;
+}
+
+.footer-social a {
+  color: var(--text-muted);
+  font-size: 1rem;
+  transition: color 0.2s ease;
+}
+
+.footer-social a:hover {
+  color: var(--accent);
+}
+
+.footer-copy {
+  font-size: 0.72rem;
+  color: var(--text-muted);
+  font-family: var(--font-mono);
+}
