@@ -30,12 +30,12 @@
 
 .article-category {
   display: inline-block;
-  padding: 0.2rem 0.6rem;
+  padding: 0.25rem 0.7rem;
   font-size: 0.7rem;
   font-weight: 500;
   background: var(--accent-dim);
   color: var(--accent);
-  border-radius: 3px;
+  border-radius: 20px;
 }
 
 .article-content {

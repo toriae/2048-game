@@ -11,12 +11,12 @@
 }
 
 .work-card {
-  padding: 1.25rem 1.5rem;
+  padding: 1.5rem;
   background: var(--bg-card);
   border: 1px solid var(--border);
-  border-radius: var(--radius-md);
+  border-radius: var(--radius-lg);
   border-top: 2px solid var(--accent);
-  transition: all var(--transition);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   position: relative;
 }
 
@@ -32,8 +32,8 @@
 }
 
 .work-card:hover {
-  transform: translateY(-3px);
-  box-shadow: var(--shadow-md);
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
 }
 
 .work-card:hover::after {

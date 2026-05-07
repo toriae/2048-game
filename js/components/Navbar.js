@@ -2,11 +2,8 @@ import { store } from '../store.js';
 
 const navLinks = [
   { label: '文章', route: '/writing' },
-  { label: '书库', route: '/library' },
   { label: '项目', route: '/works' },
-  { label: '游戏', route: '/game' },
   { label: '时间线', route: '/timeline' },
-  { label: '留言', route: '/guestbook' },
   { label: '关于', route: '/about' }
 ];
 

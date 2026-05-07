@@ -9,13 +9,7 @@ function safeParse(key, fallback) {
 
 const defaultState = {
   theme: localStorage.getItem('theme') || 'dark',
-  fontSize: parseInt(localStorage.getItem('fontSize')) || 16,
-  readerSettings: safeParse('readerSettings', {
-    theme: 'dark',
-    fontSize: 18,
-    lineHeight: 1.8,
-    pageMode: 'scroll'
-  })
+  fontSize: parseInt(localStorage.getItem('fontSize')) || 16
 };
 
 class Store {
@@ -42,11 +36,7 @@ class Store {
 
   persist(key, value) {
     try {
-      if (key === 'readerSettings') {
-        localStorage.setItem('readerSettings', JSON.stringify(value));
-      } else {
-        localStorage.setItem(key, value);
-      }
+      localStorage.setItem(key, value);
     } catch (e) {
       console.warn('Failed to persist setting:', key, e);
     }

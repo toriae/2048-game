@@ -3,15 +3,15 @@
   .hamburger { display: block; }
 
   .hero { padding: 5rem 1.5rem 3rem; }
-  .hero-name { font-size: 1.85rem; }
+  .hero-name { font-size: 2rem; }
   .hero-desc { font-size: 0.95rem; }
 
   .quick-nav-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 0.5rem;
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
   }
 
-  .quick-nav-item { padding: 1rem; }
+  .quick-nav-item { padding: 1.25rem; }
 
   .status-bar {
     flex-direction: column;
@@ -22,10 +22,8 @@
   .container { padding: 0 1rem; }
 
   .writing-page,
-  .library-page,
   .works-page,
   .timeline-page,
-  .guestbook-page,
   .about-page {
     padding: 2rem 1rem 3rem;
   }
@@ -36,15 +34,10 @@
   .article-card-horizontal { flex-direction: column; gap: 0.5rem; }
   .article-card-abstract { -webkit-line-clamp: 2; }
 
-  .bookshelf { grid-template-columns: repeat(2, 1fr); gap: 0.75rem; }
-  .book-cover { height: 120px; }
-
   .works-grid { grid-template-columns: 1fr; }
 
   .timeline { padding-left: 1.5rem; }
   .timeline-dot { left: -1.5rem; }
-
-  .form-row { flex-direction: column; gap: 0; }
 
   .footer-inner {
     flex-direction: column;
@@ -52,11 +45,6 @@
     text-align: center;
   }
   .footer-links { flex-wrap: wrap; justify-content: center; }
-
-  .reader-toc { width: 240px; }
-  .reader-settings { width: 260px; }
-  .chapter-content { padding: 0 1.25rem; }
-  .chapter-nav { padding: 1rem 1.25rem 0; }
 
   .home-section { padding: 0 1.5rem 2rem; }
 }
@@ -66,20 +54,12 @@
     grid-template-columns: repeat(2, 1fr);
   }
 
-  .bookshelf {
-    grid-template-columns: repeat(3, 1fr);
-  }
-
   .works-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
 @media (min-width: 1024px) {
-  .bookshelf {
-    grid-template-columns: repeat(4, 1fr);
-  }
-
   .works-grid {
     grid-template-columns: repeat(3, 1fr);
   }

@@ -2,26 +2,18 @@ const routes = {
   '/': { page: 'home', title: '首页' },
   '/writing': { page: 'writing', title: '文章' },
   '/writing/:id': { page: 'article', title: '文章详情' },
-  '/library': { page: 'library', title: '书库' },
-  '/library/read/:bookId': { page: 'reader', title: '阅读', fullScreen: true },
   '/works': { page: 'works', title: '作品' },
   '/timeline': { page: 'timeline', title: '年表' },
-  '/guestbook': { page: 'guestbook', title: '留言' },
-  '/about': { page: 'about', title: '关于' },
-  '/game': { page: 'game', title: '游戏', fullScreen: true }
+  '/about': { page: 'about', title: '关于' }
 };
 
 const pageModules = {
   home: () => import('./pages/home.js'),
   writing: () => import('./pages/writing.js'),
   article: () => import('./pages/article.js'),
-  library: () => import('./pages/library.js'),
-  reader: () => import('./pages/reader.js'),
   works: () => import('./pages/works.js'),
   timeline: () => import('./pages/timeline.js'),
-  guestbook: () => import('./pages/guestbook.js'),
-  about: () => import('./pages/about.js'),
-  game: () => import('./pages/game.js')
+  about: () => import('./pages/about.js')
 };
 
 let currentRoute = null;

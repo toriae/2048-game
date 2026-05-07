@@ -6,9 +6,9 @@
   font-size: 0.85rem;
   font-weight: 500;
   border: 1px solid var(--border);
-  border-radius: var(--radius-sm);
+  border-radius: var(--radius-md);
   cursor: pointer;
-  transition: all var(--transition);
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
   background: var(--bg-secondary);
   color: var(--text-primary);
   text-decoration: none;
@@ -17,7 +17,8 @@
 .btn:hover {
   background: var(--bg-hover);
   border-color: var(--text-muted);
-  transform: translateY(-1px);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-sm);
 }
 
 .btn:active {
@@ -33,6 +34,7 @@
 .btn--primary:hover {
   background: var(--accent-hover);
   border-color: var(--accent-hover);
+  box-shadow: 0 4px 12px rgba(88, 166, 255, 0.3);
 }
 
 .btn--ghost {
@@ -53,12 +55,17 @@
 
 .tag {
   display: inline-block;
-  padding: 0.2rem 0.6rem;
+  padding: 0.25rem 0.7rem;
   font-size: 0.72rem;
   font-weight: 500;
   border-radius: 20px;
   background: var(--accent-dim);
   color: var(--accent);
+  transition: all 0.2s ease;
+}
+
+.tag:hover {
+  transform: scale(1.05);
 }
 
 .tag--green {
@@ -73,13 +80,19 @@
 
 .badge {
   display: inline-block;
-  padding: 0.15rem 0.5rem;
+  padding: 0.2rem 0.55rem;
   font-size: 0.68rem;
   font-family: var(--font-mono);
   background: var(--bg-hover);
   color: var(--text-muted);
-  border-radius: 3px;
+  border-radius: var(--radius-sm);
   border: 1px solid var(--border-light);
+  transition: all 0.2s ease;
+}
+
+.badge:hover {
+  color: var(--accent);
+  border-color: var(--accent);
 }
 
 .card {

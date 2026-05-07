@@ -10,7 +10,7 @@ export default async function homePage() {
 
   page.innerHTML = `
     <section class="hero">
-      <div class="hero-greeting">whoami</div>
+      <div class="hero-greeting">who am i</div>
       <h1 class="hero-name">hoto</h1>
       <p class="hero-desc">AI 方向 / RAG / 知识图谱 / 偶尔写全栈</p>
       <div class="hero-tags">
@@ -22,7 +22,6 @@ export default async function homePage() {
       </div>
       <div class="hero-links">
         <a class="btn" href="#/writing">文章</a>
-        <a class="btn btn--ghost" href="#/library">书库</a>
         <a class="btn btn--ghost" href="#/about">关于</a>
       </div>
     </section>
@@ -44,11 +43,6 @@ export default async function homePage() {
           <span class="quick-nav-label">文章</span>
           <span class="quick-nav-desc">学习笔记与技术记录</span>
         </a>
-        <a class="quick-nav-item" href="#/library">
-          <span class="quick-nav-icon"><i class="fas fa-book"></i></span>
-          <span class="quick-nav-label">书库</span>
-          <span class="quick-nav-desc">在浏览器中阅读</span>
-        </a>
         <a class="quick-nav-item" href="#/works">
           <span class="quick-nav-icon"><i class="fas fa-code"></i></span>
           <span class="quick-nav-label">项目</span>
@@ -58,11 +52,6 @@ export default async function homePage() {
           <span class="quick-nav-icon"><i class="fas fa-stream"></i></span>
           <span class="quick-nav-label">时间线</span>
           <span class="quick-nav-desc">成长与学习轨迹</span>
-        </a>
-        <a class="quick-nav-item" href="#/game">
-          <span class="quick-nav-icon"><i class="fas fa-gamepad"></i></span>
-          <span class="quick-nav-label">游戏</span>
-          <span class="quick-nav-desc">贪吃蛇关卡挑战</span>
         </a>
       </div>
     </div>
